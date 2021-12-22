@@ -8,6 +8,7 @@
 
 <p> Projeto consiste na construção de uma rede social utilizando do framework Django</p>
 <p> Projeto apresentado à disciplina de Programação para Internet 2 do curso de Sistemas para Internet do Instituto Federal de Brasília, Campus Brasília. </p>
+<p> ✔ Link para o projeto: http://matthaussouza.pythonanywhere.com/</p>
 
 ###  📄 Pré-requisitos e como rodar a aplicação
 
