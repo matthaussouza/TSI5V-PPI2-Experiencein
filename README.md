@@ -2,7 +2,7 @@
 
 <p align="center"> Desenvolvimento de uma rede social usando o Django </p>
 
-<h4 align="center"> 🔨 Projeto em construção… 🔨 </h4>
+<h4 align="center"> ✔ Projeto Finalizado ✔ </h4>
 
 ###  🔎 Sobre o Projeto
 
