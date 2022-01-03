@@ -12,8 +12,8 @@
 ###  📄 Como rodar a aplicação
 
 <p> Antes de começar, você precisará ter instalado em sua máquina os seguintes programas:</p>
-<p>✔<a href="https://code.visualstudio.com" > VS Code - Necessário para o desenvolvimento do projeto </a></p>
-<p>✔<a href="https://git-scm.com/downloads"> Git-bash - Necessário para executar o projeto </a></p>
+<p>✔<a href="https://code.visualstudio.com" > VS Code </a></p>
+<p>✔<a href="https://git-scm.com/downloads"> Git-bash </a></p>
 
 <p> Além disso voce precisará ter o python e o django já instalados em sua máquina. </p>
 
