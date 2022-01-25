@@ -5,6 +5,5 @@ from perfis import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('perfis.urls')),
-    path('', views.index),
     path('', include('usuarios.urls'))
 ]
