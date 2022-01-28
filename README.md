@@ -1,34 +1,70 @@
-<h1 align="center"> Experiencein </h1>
+# Getting Started with Create React App
 
-<p align="center"> Desenvolvimento de uma rede social usando o Django </p>
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-<h4 align="center"> ✅ Projeto Finalizado ✅ </h4>
+## Available Scripts
 
-###  🔎 Sobre o Projeto
+In the project directory, you can run:
 
-<p> Projeto consiste na construção de uma rede social utilizando do framework Django</p>
-<p> Projeto apresentado à disciplina de Programação para Internet 2 do curso de Sistemas para Internet do Instituto Federal de Brasília, Campus Brasília. </p>
+### `yarn start`
 
-###  📄 Como rodar a aplicação
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-<p> Antes de começar, você precisará ter instalado em sua máquina os seguintes programas:</p>
-<p>✔<a href="https://code.visualstudio.com" > VS Code </a></p>
-<p>✔<a href="https://git-scm.com/downloads"> Git-bash </a></p>
+The page will reload if you make edits.\
+You will also see any lint errors in the console.
 
-<p> Além disso voce precisará ter o python e o django já instalados em sua máquina. </p>
+### `yarn test`
 
-###  🛠 Tecnologias
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-<p> As seguintes ferramentas serão usadas na construção do projeto: </p>
-<p>✔<a href="https://www.python.org/"> Python </a></p>
-<p>✔<a href="https://www.djangoproject.com/r"> Django </a></p>
+### `yarn build`
 
-<p> Para o desenvolvimento do projeto utilizou-se da versão 3.7 do Python e a versão 2.2 do Django. </p>
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-### 👨‍💻 Autor
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-<p> Feito por Matthaus Siqueira, aluno do 5º Semestre do curso de Sistemas para Internet do Instituto Federal de Brasília, Campus Brasília. </p>
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### 🔗 Links
+### `yarn eject`
 
-<p> ✔ Link para o projeto: http://matthaussouza.pythonanywhere.com/</p>
+**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+
+If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+
+You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+
+## Learn More
+
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+
+To learn React, check out the [React documentation](https://reactjs.org/).
+
+### Code Splitting
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+
+### Analyzing the Bundle Size
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+
+### Making a Progressive Web App
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+
+### Advanced Configuration
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+
+### Deployment
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+
+### `yarn build` fails to minify
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
