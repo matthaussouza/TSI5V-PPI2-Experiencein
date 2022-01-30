@@ -3,6 +3,7 @@ import { Switch, Route } from "react-router-dom";
 import Login from "./Pages/Login";
 import Profiles from "./Pages/Profiles";
 import Register from "./Pages/Register";
+import Perfil from "./Pages/Perfil";
 
 
 export default function Routes() {
@@ -17,6 +18,9 @@ export default function Routes() {
         </Route>
         <Route exact path='/profiles'>
           <Profiles />
+        </Route>
+        <Route exact path='/myprofile'>
+          <Perfil />
         </Route>
       </Switch>
     </div>

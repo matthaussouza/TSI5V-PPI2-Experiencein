@@ -11,8 +11,8 @@ function App() {
   }
   return (
     <div className='App'>
-      <header>
-        <nav>
+      <header className='App-header'>
+        <nav className='navlinks'>
           <ul>
             <li>
               <NavLink exact to="/">Home</NavLink>
@@ -20,8 +20,8 @@ function App() {
             <li>
               <NavLink exact to="/register">Registrar</NavLink>
             </li>
-            <li>
-              <button onClick={handlelogout}>Logout</button>
+            <li className='button'>
+              <button onClick={handlelogout}> Logout </button>
             </li>
           </ul>
         </nav>

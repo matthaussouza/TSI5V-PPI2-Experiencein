@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState} from "react";
+import { Link } from "react-router-dom";
 import { api } from "../../Services/api";
 import "./Profiles.css";
 
@@ -8,14 +9,14 @@ export default function Profiles() {
   const [mensagem, setMensagem] = useState();
   const [perfilConvidado, setPerfilConvidado] = useState();
   const [invites, setInvites] = useState();
-  //const [contacts, setContacts] = useState();
+
 
   useEffect(() => {
     api.get('/perfis/')
     .then(resp => setPerfis(resp.data))
     .catch((error) => console.error(error));
 
-    api.post('/perfil/')
+    api.get('/perfil/')
     .then((resp) => setPerfilAtual(resp.data))
     .catch((error) => console.error(error));
 
@@ -46,49 +47,36 @@ export default function Profiles() {
 
   return (
     <>
-    <h1>Olá {perfilAtual?.nome}</h1>
-    <div className="wrapper">
-    <div className="profiles">
-      <div className="invite">
-        { perfis?.map((perfil) => 
-          perfil.id === perfilAtual.id ? null : (
-            <div key={perfil.id}>
-              <div className="card">
-              <h3>{ perfil.nome }</h3>
-              <span>{ perfil.email }</span>
-              { perfil.pode_convidar ? <button className="icon" title="Convidar" onClick={() => convidar(perfil.id)}>Convidar</button> : null }
-              </div>
-              {perfil.id === perfilConvidado ? <span className="message">{mensagem}</span> : null}
-            </div>
-          ),
-        )}
-      </div>
+      <Link to="/myprofile" className="link">Olá {perfilAtual?.nome}</Link>
+        <div className="profiles">
+          <div className="invite">
+          <h2>Perfis disponiveis:</h2>
+            { perfis?.map((perfil) => 
+              perfil.id === perfilAtual?.id ? null : ( 
+                <div key={perfil.id}>
+                  <div className="card">
+                  <h3>{ perfil.nome }</h3>
+                  <span>{ perfil.email }</span>
+                  { perfil.pode_convidar ? <button className="icon" title="Convidar" onClick={() => convidar(perfil.id)}>Convidar</button> : null }
+                  </div>
+                  {perfil.id === perfilConvidado ? <span className="message">{mensagem}</span> : null}
+                </div>
+              ),
+            )}
+          </div>
 
-      <div className="invitations">
-        <h2>Convites</h2>
-        {
-          invites?.map(invite => (
-            <div className="card-default card" key={invite.inviteId}>
-              <h3>{invite.nome}</h3>
-              <button onClick={() => accept(invite.inviteId)}>Aceitar</button>
-            </div>
-          ))
-        }
-      </div>
-
-      <div className="contacts">
-        <h2>Contatos</h2>
-        <ul className="contact">
-          {perfilAtual?.contatos.map(contact => (
-            <li className="card-default card" key={contact.id}> 
-              <h3>{contact.nome}</h3>
-              <span>{contact.email}</span>
-            </li>
-            ))}
-          </ul>
-      </div>
-    </div>
-    </div>
+          <div className="invitations">
+            <h2>Convites</h2>
+            {
+              invites?.map(invite => (
+                <div className="card-default card" key={invite.inviteId}>
+                  <h3>{invite.nome}</h3>
+                  <button onClick={() => accept(invite.inviteId)}>Aceitar</button>
+                </div>
+              ))
+            }
+          </div>
+        </div>
     </>
-    );
+  );
 }
