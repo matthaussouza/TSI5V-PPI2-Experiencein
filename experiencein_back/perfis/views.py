@@ -1,4 +1,3 @@
-from json import JSONDecoder
 from django.shortcuts import render
 from django.http import HttpResponse
 from perfis.models import Perfil, Convite
@@ -43,8 +42,8 @@ def convidar(request, *args, **kwargs):
     perfil_logado = get_perfil_logado(request)
     if perfil_a_convidar != perfil_logado:
         perfil_logado.convidar(perfil_a_convidar)
-        return response.Response({'mensagem': f'Convite enviado com sucesso para {perfil_a_convidar.email}.'}, status=status.HTTP_201_CREATED)
-    raise exceptions.ParseError('Você não pode convidar o perfil com id informado.')
+        return response.Response({'mensagem': f'Convite enviado com sucesso para {perfil_a_convidar.nome}.'}, status=status.HTTP_201_CREATED)
+    raise exceptions.ParseError('Você não pode convidar este perfil.')
 
 @api_view(['POST'])
 @renderer_classes((JSONRenderer, BrowsableAPIRenderer))
@@ -53,11 +52,11 @@ def aceitar(request, *args, **kwargs):
     try:
         convite = Convite.objects.filter(convidado=perfil_logado).get(id=kwargs['convite_id'])
     except:
-        raise exceptions.NotFound('Não foi encontrado um convite com id informado.')
+        raise exceptions.NotFound('Convite não encontrado.')
     convite.aceitar()
     return response.Response({'mensagem': 'Convite aceito com sucesso.'}, status=status.HTTP_201_CREATED)
 
-@api_view(['POST'])
+@api_view(['GET'])
 @renderer_classes((JSONRenderer, BrowsableAPIRenderer))
 def get_meu_perfil(request, *args, **kwargs):
     perfil_logado = get_perfil_logado(request)

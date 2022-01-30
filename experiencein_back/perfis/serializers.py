@@ -15,7 +15,7 @@ class PerfilSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Perfil
-        fields = ('id', 'nome', 'email', 'nome_empresa', 'senha', 'contatos')
+        fields = ('id', 'nome', 'telefone', 'email', 'nome_empresa', 'senha', 'contatos')
         read_only_fields = ('id',)
 
     def create(self, validated_data):
@@ -24,7 +24,7 @@ class PerfilSerializer(serializers.ModelSerializer):
             usuario.set_password(validated_data['senha'])
             usuario.save()
         except:
-            raise exceptions.ParseError('Já existe um usuário cadastrado com esse nome', code=status.HTTP_400_BAD_REQUEST)
+            raise exceptions.ParseError('Nome de usuário já cadastrado.', code=status.HTTP_400_BAD_REQUEST)
 
         Token.objects.create(user=usuario)
         validated_data['usuario'] = usuario
