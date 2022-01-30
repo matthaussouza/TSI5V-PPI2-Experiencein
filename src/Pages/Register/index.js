@@ -28,7 +28,7 @@ export default function Register() {
   return <div className="form">
     <form onSubmit={submit}>
       <label>
-        Name
+        Nome
       </label>
       <input type="text" onChange={(e) => setName(e.target.value)}/>
       <label>
@@ -36,15 +36,15 @@ export default function Register() {
       </label>
       <input type="text" onChange={(e) => setEmail(e.target.value)}/>
       <label>
-        Company Name
+        Nome da Empresa
       </label>
       <input type="text" onChange={(e) => setCompanyName(e.target.value)}/>
       <label>
-        Password
+        Senha
       </label>
       <input type="password" onChange={(e) => setPassword(e.target.value)}/>
 
-      <button>Register</button>
+      <button>Registrar</button>
     </form>
   </div>;
 }
