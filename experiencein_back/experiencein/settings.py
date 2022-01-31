@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 """
 
 import os
+import django_heroku
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -25,7 +26,7 @@ SECRET_KEY = 'b_b7i1vn3wk_&whdh1ey!gyo7zezkwt#z4=0zywr#f*vcan_d7'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost']
+ALLOWED_HOSTS = ['https://exp-inback.herokuapp.com/']
 
 
 # Application definition
@@ -140,4 +141,7 @@ LOGOUT_REDIRECT_URL=LOGIN_URL
 CORS_ORIGIN_ALLOW_ALL = False
 CORS_ORIGIN_WHITELIST = (
     'http://localhost:3000',
+    'https://exp-inback.herokuapp.com/'
 )
+
+django_heroku.settings(locals())
